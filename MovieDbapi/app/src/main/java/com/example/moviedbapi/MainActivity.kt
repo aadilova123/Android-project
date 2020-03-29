@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(),PostAdapter.RecyclerViewItemClick {
         setContentView(R.layout.activity_main)
 
         recyclerView = findViewById(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = LinearLayoutManager(this) as RecyclerView.LayoutManager?
 
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout)
         swipeRefreshLayout.setOnRefreshListener {
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(),PostAdapter.RecyclerViewItemClick {
 
     override fun itemClick(position: Int, item: Post) {
         val intent = Intent(this, PostDetailActivity::class.java)
-        intent.putExtra("post_id", item.postId)
+        intent.putExtra("post_id", item.id)
         startActivity(intent)
     }
 

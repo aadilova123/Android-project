@@ -14,7 +14,7 @@ import retrofit2.http.Path
 import java.util.concurrent.TimeUnit
 
 object RetrofitService {
-    const val BASE_URL = "https://www.kinopoisk.ru/comingsoon/"
+    const val BASE_URL = "https://api.themoviedb.org/3/"
 
     fun getPostApi(): PostApi {
         val retrofit = Retrofit.Builder()

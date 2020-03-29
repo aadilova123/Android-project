@@ -35,8 +35,8 @@ class PostAdapter(
             val tvUserId = view.findViewById<TextView>(R.id.tvUserId)
 
             tvTitle.text = post?.title
-            tvPostId.text = post?.postId.toString()
-            tvUserId.text = post?.userId.toString()
+            tvPostId.text = post?.id.toString()
+
 
             view.setOnClickListener {
                 itemClickListener?.itemClick(adapterPosition, post!!)
