@@ -1,12 +1,14 @@
 package com.example.moviedbapi
 import com.google.gson.annotations.SerializedName
+import java.time.LocalDate
 
 data class Post(
 
-    @SerializedName("id") val postId: Int,
-    @SerializedName("userId") val userId: Int,
+    @SerializedName("id") val movieId: Int,
+    @SerializedName("vote_count") val voteCount: Int,
     @SerializedName("title") val title: String,
-    @SerializedName("body") val body: String
-//    @SerializedName("rating") val rating : Double
-
+    @SerializedName("original_title") val originalTitle: String,
+    @SerializedName("overview") val description : String,
+    @SerializedName("vote_average") val rating : Double,
+    @SerializedName("release_date") val releaseDate : LocalDate
     )

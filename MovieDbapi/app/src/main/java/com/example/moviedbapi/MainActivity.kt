@@ -40,9 +40,12 @@ class MainActivity : AppCompatActivity(),PostAdapter.RecyclerViewItemClick {
     }
 
     override fun itemClick(position: Int, item: Post) {
+        /*
         val intent = Intent(this, PostDetailActivity::class.java)
-        intent.putExtra("post_id", item.postId)
+        intent.putExtra("id", item.movieId)
         startActivity(intent)
+
+         */
     }
 
     private fun getPosts() {
