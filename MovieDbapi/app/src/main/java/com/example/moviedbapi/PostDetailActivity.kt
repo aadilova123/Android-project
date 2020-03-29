@@ -24,6 +24,7 @@ class PostDetailActivity : AppCompatActivity() {
         tvTitle = findViewById(R.id.tvTitle)
         tvBody = findViewById(R.id.tvBody)
 
+
         val postId = intent.getIntExtra("post_id", 1)
         getPost(id = postId)
     }
@@ -38,7 +39,7 @@ class PostDetailActivity : AppCompatActivity() {
                 progressBar.visibility = View.GONE
                 val post = response.body()
                 if (post != null) {
-                    tvBody.text = post.body
+                    tvBody.text = post.overview
                     tvTitle.text = post.title
                 }
             }
