@@ -1,7 +1,9 @@
 package com.example.moviedbapi
 
+import android.media.Image
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -15,15 +17,20 @@ class PostDetailActivity : AppCompatActivity() {
     private lateinit var progressBar: ProgressBar
     private lateinit var tvTitle: TextView
     private lateinit var tvBody: TextView
+    private lateinit var rating: TextView
+    private lateinit var postPhoto: ImageView
+    private lateinit var genre: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post_detail)
 
         progressBar = findViewById(R.id.progressBar)
-        tvTitle = findViewById(R.id.tvTitle)
-        tvBody = findViewById(R.id.tvBody)
-
+        tvTitle = findViewById(R.id.tvName)
+        tvBody = findViewById(R.id.tvOverview)
+        rating = findViewById(R.id.tvRating)
+        postPhoto = findViewById(R.id.ivBackdrop)
+        genre = findViewById(R.id.tvGenre)
         val postId = intent.getIntExtra("post_id", 1)
         getPost(id = postId)
     }
@@ -40,6 +47,8 @@ class PostDetailActivity : AppCompatActivity() {
                 if (post != null) {
                     tvBody.text = post.body
                     tvTitle.text = post.title
+                    rating.text = post.rating.toString()
+                    genre.text = post.genre
                 }
             }
         })

@@ -32,11 +32,11 @@ class PostAdapter(
         fun bind(post: Post?) {
             val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
             val tvPostId = view.findViewById<TextView>(R.id.tvPostId)
-            val tvUserId = view.findViewById<TextView>(R.id.tvUserId)
+            val rating = view.findViewById<TextView>(R.id.tvRating)
 
             tvTitle.text = post?.title
             tvPostId.text = post?.postId.toString()
-            tvUserId.text = post?.userId.toString()
+            rating.text=post?.rating.toString()
 
             view.setOnClickListener {
                 itemClickListener?.itemClick(adapterPosition, post!!)

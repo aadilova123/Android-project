@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(),PostAdapter.RecyclerViewItemClick {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerView = findViewById(R.id.recyclerView)
+        recyclerView = findViewById(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout)

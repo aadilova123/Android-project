@@ -6,7 +6,8 @@ data class Post(
     @SerializedName("id") val postId: Int,
     @SerializedName("userId") val userId: Int,
     @SerializedName("title") val title: String,
-    @SerializedName("body") val body: String
-//    @SerializedName("rating") val rating : Double
+    @SerializedName("body") val body: String,
+    @SerializedName("rating") val rating : Double,
+    @SerializedName("rating") val genre : String
 
     )
