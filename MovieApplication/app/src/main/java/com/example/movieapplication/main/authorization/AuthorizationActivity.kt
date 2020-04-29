@@ -20,8 +20,8 @@ class AuthorizationActivity : AppCompatActivity(){
         setContentView(R.layout.authorization)
 
 
-        editTextUsername.setText("NursultanAndroid")
-        editTextPassword.setText("1234")
+        editTextUsername.setText("a_adilova")
+        editTextPassword.setText("12345")
         buttonLogin.setOnClickListener{
             loginViewModel.login(
                 username = editTextUsername.text.toString(),
