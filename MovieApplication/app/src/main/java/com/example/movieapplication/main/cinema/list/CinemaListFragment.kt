@@ -14,8 +14,6 @@ import com.example.movieapplication.data.roomCinema.Cinema
 import com.example.movieapplication.main.cinema.CinemaViewModel
 import com.example.movieapplication.main.cinema.adapters.CinemaListAdapter
 import com.example.movieapplication.utilities.AppConstants
-
-
 import org.koin.android.ext.android.inject
 
 class CinemaListFragment : ParentFragment() {
@@ -71,7 +69,7 @@ class CinemaListFragment : ParentFragment() {
 
     override fun setData() {
         listViewModel.liveData.observe(viewLifecycleOwner, Observer { cinemaList ->
-            cinemaListAdapter.setCinemas(cinemaList as List<Cinema>)
+            cinemaListAdapter.setCinemas(cinemaList)
         })
     }
 
